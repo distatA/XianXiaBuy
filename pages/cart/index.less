@@ -1,0 +1,131 @@
+.goods_list {
+  .goods_leftPart {
+    width: 150rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .goods_item {
+    display: flex;
+
+    .goods_rightPart {
+      flex: 1;
+      position: relative;
+
+      .goods_count {
+        width: 150rpx;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: absolute;
+        bottom: 15rpx;
+        right: 50rpx;
+
+        .iconfont {
+          font-size: 45rpx;
+        }
+
+        .goods_num {
+          min-width: 40rpx;
+          display: flex;
+          justify-content: center;
+        }
+      }
+    }
+  }
+}
+
+.empty {
+  height: 100vh;
+  width: 750rpx;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  z-index: -1;
+  &.show{
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  &_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+  }
+  &_images{
+    width: 658rpx;
+    height: 444rpx;
+  }
+  &_tips{
+      color: #d0d0d0;
+      font-size: 45rpx;
+
+  }
+
+}
+.operationBar{
+  border-top: 1px solid #eee;
+  width: 750rpx;
+  height: 82rpx;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &_left{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    // width: rpx;
+  }
+ 
+  &_select{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 175rpx;
+    &_all{
+      color: grey;
+      font-size: 28rpx;
+      margin-left: 10rpx;
+    }
+  }
+  &_total{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 250rpx;
+   &_price{
+     flex: 1;
+     color: var(--themeColor);
+     &::before{
+       content:'¥';
+       color: currentColor;
+       font-size: 28rpx;
+       
+     }
+   }
+  }
+  &_btn{
+    border-radius: 26rpx;
+    width: 150rpx;
+    height: 52rpx;
+    display: flex;
+    font-size: 21rpx;
+    align-items: center;
+    justify-content:center;
+    background-color:var(--themeColor);
+    color:#fff;
+    margin-right: 20rpx
+    ;
+  }
+}

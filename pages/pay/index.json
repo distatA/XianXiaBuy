@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "支付",
+  "usingComponents": {
+  "goodsitem":"/components/goods_item/goods_item"
+
+  }
+}

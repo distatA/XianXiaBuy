@@ -1,0 +1,5 @@
+<view class="search-box" bind:tap="handleSearch">
+	<view class="search">
+		<text class="iconfont iconsousuo"> 搜索</text>
+	</view>
+</view>

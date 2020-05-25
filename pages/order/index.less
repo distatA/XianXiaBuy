@@ -1,0 +1,40 @@
+page{
+  background-color:var(--pageBackgroundColor);
+}
+.order{
+  margin-top: 30rpx;
+  height: 250rpx;
+  width: 750rpx;
+  border: 1rpx solid #eeeeee;
+  text-align: center;
+  background-color: #fff;
+  &:nth-child(1){
+    margin-top: 0;
+  }
+  &_row{
+    height: 80rpx;
+    width: 97%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  &_left{
+    color: grey;
+    width: 150rpx;
+    padding-left: 15rpx;
+  }
+  &_right{
+    flex: 1;
+    text-align: right;
+    padding-right: 15rpx;
+
+  }
+  .parice {
+    color: var(--themeColor);
+    &::before{
+      content:'¥';
+      font-size: 25rpx;
+    }
+  }
+}

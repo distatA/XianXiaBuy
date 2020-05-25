@@ -1,0 +1,17 @@
+
+    <!-- 图片有数据就渲染,没有就默认图片 -->
+    <navigator url="/pages/goods_detail/index?id={{item.goods_id}}" hover-class="none" open-type="navigate" class="productList_item" >
+      
+      
+        <image class="productList_photo" src="{{item.goods_small_logo || '../../images/下架.png'}}"  mode="aspectFill" />
+        
+      <view class="productList_info">
+        <view class="productList_info_title">
+        {{item.goods_name}}
+        </view>
+        <view class="productList_info_price">
+         {{ item.goods_small_logo ? item.goods_price:'0'}}
+        </view>
+
+      </view>
+    </navigator>

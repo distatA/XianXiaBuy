@@ -1,0 +1,39 @@
+page {
+  background-color: var(--pageBackgroundColor);
+}
+.order {
+  margin-top: 30rpx;
+  height: 250rpx;
+  width: 750rpx;
+  border: 1rpx solid #eeeeee;
+  text-align: center;
+  background-color: #fff;
+}
+.order:nth-child(1) {
+  margin-top: 0;
+}
+.order_row {
+  height: 80rpx;
+  width: 97%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+.order_left {
+  color: grey;
+  width: 150rpx;
+  padding-left: 15rpx;
+}
+.order_right {
+  flex: 1;
+  text-align: right;
+  padding-right: 15rpx;
+}
+.order .parice {
+  color: var(--themeColor);
+}
+.order .parice::before {
+  content: '¥';
+  font-size: 25rpx;
+}

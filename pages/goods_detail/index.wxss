@@ -1,0 +1,155 @@
+.swiper {
+  width: 750rpx;
+  height: 500rpx;
+  /* 覆盖组件中选中点点的样式 */
+}
+.swiper .wx-swiper-dot-active {
+  width: 35rpx;
+  border-radius: 100rpx;
+}
+.swiper .swiperImg {
+  width: 750rpx;
+  height: 500rpx;
+}
+.swiper .imgCalculator {
+  position: fix;
+  top: 0;
+  right: 0;
+  width: 100rpx;
+  height: 70rpx;
+  border-radius: 25rpx;
+  background-color: #757272;
+  color: white;
+  text-align: center;
+}
+.productDetail {
+  margin-top: 30rpx;
+  padding: 0 15rpx;
+  height: 235rpx;
+  font-size: 35rpx;
+}
+.productDetail_top {
+  padding: 20rpx 10rpx;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 41rpx;
+}
+.productDetail_top_price {
+  color: var(--themeColor);
+  width: 135rpx;
+}
+.productDetail_top_price::before {
+  content: '¥';
+  color: currentColor;
+  font-size: 35rpx;
+  padding-left: 15rpx;
+}
+.productDetail_top_handle {
+  width: 150rpx;
+  color: grey;
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  position: relative;
+}
+.productDetail_top_handle .iconfont {
+  font-size: 41rpx;
+}
+.productDetail_top_handle .iconfont .share {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  padding: 0;
+  left: 0 ;
+}
+.productDetail_title {
+  height: 90rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.image-textDetail {
+  line-height: 40rpx;
+  margin: 0  auto;
+  height: 40rpx;
+  width: 300rpx;
+  font-size: 35rpx;
+  padding: 20rpx;
+  text-align: center;
+}
+.backTop {
+  position: fixed;
+  bottom: 250rpx;
+  right: 30rpx;
+  width: 100rpx;
+  background-color: #e0d7d7;
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+}
+.backTop .iconfanhuidingbu {
+  font-size: 50rpx;
+}
+.rich-text {
+  margin-top: 35rpx;
+}
+.rich-text .my_img {
+  vertical-align: top;
+}
+.BottomBar {
+  width: 750rpx;
+  position: fixed;
+  background-color: #fff;
+  bottom: 0;
+  height: 95rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.BottomBar .litBox {
+  width: 120rpx;
+  display: flex;
+  font-size: 27rpx;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.BottomBar .litBox .iconfont {
+  padding: 5rpx 0 ;
+  font-size: 40rpx;
+}
+.BottomBar .litBox .iconkefu1 {
+  position: relative;
+}
+.BottomBar .litBox .iconkefu1 .concat {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  left: 0 ;
+}
+.BottomBar .buyCar,
+.BottomBar .buyNow {
+  width: 196rpx;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--themeColor);
+  border-radius: 30rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+}
+.BottomBar .buyCar {
+  background-color: #fcaa23;
+}

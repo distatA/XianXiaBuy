@@ -1,0 +1,9 @@
+@import "./styles/iconfont.wxss";
+
+page{
+  --themeColor:#fe3648;
+  --littleFontColor:grey;
+  --borderLineColor:#eee;
+  --pageBackgroundColor:#f7f7f7
+  
+}

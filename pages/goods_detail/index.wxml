@@ -1,0 +1,50 @@
+<!-- 轮播图 -->
+<swiper class="swiper" circular indicator-dots indicator-color indicator-active-color="#fe3648" autoplay>
+  
+  <swiper-item wx:for="{{ goodsDetail.pics }}" wx:key="pics_id">
+    <image class="swiperImg" src="{{item.pics_big}}" bind:tap="previewImage" data-current="{{index}}" mode="widthFix">
+      <!-- 照片页数计算器  -->
+       <!-- <view class="imgCalculator"> -->
+        <!-- 1 / 5 -->
+      <!-- </view> -->
+    </image>
+  </swiper-item>
+</swiper>
+<!-- 产品信息 -->
+<view class="productDetail">
+  <view class="productDetail_top">
+    <view class="productDetail_top_price">{{goodsDetail.goods_price}}</view>
+    <view class="productDetail_top_handle">
+      <view class="iconfont iconfenxiang">
+        <!-- 把按钮透明度设成0,定位,然后点击分享就可以转发 -->
+        <button class="share" open-type="share"></button>
+      </view>
+      <view class="iconfont iconaixinD"></view>
+    </view>
+  </view>
+  <view class="productDetail_title">{{goodsDetail.goods_name}}</view>
+</view>
+<!-- 返回顶部 -->
+<view class="backTop" hidden="{{show}}" bind:tap="handleTop">
+  <view class="iconfont iconfanhuidingbu">
+</view>
+</view>
+<!-- 图文详情 -->
+<view class="image-textDetail">图文详情</view>
+  <rich-text class="rich-text" nodes="{{goodsDetail.goods_introduce}}"></rich-text>
+
+<!-- 底部栏目 -->
+<view class="BottomBar">
+  <view class="litBox">
+    <view class="iconfont iconkefu1">
+      <button class="concat" open-type="contact">分享</button>
+    </view>
+    联系客服
+  </view>
+  <view class="litBox">
+    <view class="iconfont icongouwu" bind:tap="gotoCar"></view>
+    购物车
+  </view>
+  <view class="buyCar" bind:tap="joinCar">加入购物车</view>
+  <view class="buyNow" bind:tap="buyNow">立即购买</view>
+</view>

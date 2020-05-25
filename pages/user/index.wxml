@@ -1,0 +1,40 @@
+<view class="userTop">
+  <view class="userTop_headerImg">
+    <image class="userTop_headerImg_img" src="../../images/下载 (2).jfif" mode="widthFix" />
+  </view>
+  <view class="userTop_info">
+    <view class="userTop_info_top" style="margin-bottom:10rpx">Jacob</view>
+    <view class="userTop_info_btm">uin:4545454</view>
+  </view>
+  <view class="userTop_sao">
+    <view class="iconfont iconsaoyisao"></view>
+    <view class="userTop_sao_font">扫一扫</view>
+  </view>
+</view>
+<view class="nav">
+  <view class="nav_item" wx:for="{{nav}}" wx:key="id"bind:tap="toOrder" data-index="{{index}}">
+    <view class="iconfont {{item.class}}"></view>
+    <view class="nav_font">{{item.value}}</view>
+  </view>
+</view>
+<view class="money">
+  <view class="money_left">
+    <view class="iconfont iconwodeqianbao"></view>
+    <view class="moeny_left_word">我的钱包</view>
+  </view>
+  <view class="money_right">
+    <view class="money_right_number">0</view>
+    <view class="money_right_coupon">优惠券</view>
+  </view>
+</view>
+<view class="manageMore">
+  <view class="manageMore_item" wx:for="{{manage}}" wx:key="index">
+    <view class="iconfont {{item.class}} "> </view>
+      <view class="manageMore_item_word">
+       {{item.value}}
+      </view>
+        
+  </view>
+    
+</view>
+  

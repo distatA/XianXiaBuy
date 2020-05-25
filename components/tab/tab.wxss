@@ -1,0 +1,17 @@
+.tabs {
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tabs_item {
+  width: 33%;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tabs .active {
+  border-bottom: 4rpx solid var(--themeColor);
+  font-weight: bold;
+}

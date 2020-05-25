@@ -1,0 +1,40 @@
+<!-- 搜索框 -->
+<search />
+<!-- 轮播图 -->
+<swiper class="swiper" circular indicator-dots indicator-color indicator-active-color="#eb4450" autoplay>
+  <swiper-item wx:for="{{swiperImg}}" wx:key="goods_id">
+    <image class="swiperImg" src="{{item.image_src}}"></image>
+  </swiper-item>
+</swiper>
+<!-- 其他商品 -->
+<view class="nav">
+  <navigator class="nav-item" wx:for="{{navData}}"    
+  url="{{item.navigator_url}}" hover-class="none" open-type="{{item.open_type}}" wx:key="name">
+    <image src="{{item.image_src}}" class="nav_img" ></image>
+  </navigator>
+
+</view>
+
+
+<!-- 品牌类型标题 -->
+<view wx:for="{{ContentData}}" wx:key="id" class="section">
+
+  <image class="title" src="{{item.floor_title.image_src}}" lazy-load="false" />
+  <!-- 图片五宫格 -->
+    <view class="photesBox" >
+      <!-- 循环  -->
+     
+        
+         <!-- <navigator wx:for="{{item.product_list}}" wx:key="name" wx:for-item="item2" url="{{item.navigator_url}}" hover-class="none" open-type="{{item.open_type}}"> -->
+      <block wx:for="{{item.product_list}}" wx:key="name" wx:for-item="item2" >
+        
+         <!-- <navigator  url="{{item2.navigator_url}}" hover-class="none" open-type="{{item2.open_type}}"> -->
+      <image class="photesBox_photes" style="width:{{item2.image_width+'rpx'}}" src="{{item2.image_src}}"  bind:tap="handleImg"  data-value="{{item2.navigator_url}}" />
+      <!-- </navigator> -->
+
+      </block>
+    </view>
+</view>
+
+
+

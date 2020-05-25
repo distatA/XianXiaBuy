@@ -1,0 +1,36 @@
+<search />
+<view class="category">
+  <!-- 商品左边 -->
+   <scroll-view scroll-y  class="category_left" >
+    <view wx:for="{{categoryLeft}}" wx:key="cat_id" class="categoryLeft_item  {{ activeIndex === index? 'active':''}} " bindtap="handleClick" data-index="{{index}}" >
+         {{item.cat_name}}
+    </view>
+     </scroll-view >
+     <!-- 右侧部分  -->
+     <scroll-view  scroll-y class="category_right" scroll-with-animation scroll-top="{{scrollTop}}">
+            <view class="category_right_title_box" >
+                      <!-- 类型标题 -->
+              <view class="category_right_title {{order === index ? 'active':''}} " wx:for="{{categoryRight}}" wx:key="cat_id" bind:tap="clikCategoryRight" data-order="{{index}}" >
+                  {{item.cat_name}}
+              </view>
+          </view>
+
+          <!-- 循环每一类  -->
+          <block wx:for="{{categoryRight}}" wx:key="cat_id">
+               <!-- 商品列表 -->
+         <view class="category_right_list {{order !== index? 'hidden ':''}}  "  >
+               <!-- 每一项商品 -->
+              <navigator  url="/pages/goods_list/index?cid={{item2.cat_id}}" class="category_right_item"wx:for="{{item.children}}" wx:key="cat_id" wx:for-item="item2"  >
+                   <!-- 图片  -->
+                  <image class="category_right_img" src="{{item2.cat_icon}}" mode="aspectFit" />
+                  <!-- 文字 -->
+                  {{item2.cat_name}}
+               </navigator>
+         </view>
+          </block>
+
+     <!-- 商品右边 -->
+     </scroll-view >
+       
+</view>
+  

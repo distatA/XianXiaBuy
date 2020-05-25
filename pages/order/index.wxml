@@ -1,0 +1,23 @@
+<!-- <tab item="{{tabList}}" /> -->
+<van-tabs active="{{ active }}" bind:change="onChange">
+  <van-tab title="全部">
+    <block wx:for="{{orders}}" wx:key="index" >
+          <view class="order">
+      <view class="order_row">
+        <view class="order_left">订单编号</view>
+        <view class="order_right">{{item.order_number}}</view>
+      </view>
+        <view class="order_row">
+        <view class="order_left">订单金额</view>
+        <view class="order_right parice">{{item.order_price}}</view>
+      </view>
+        <view class="order_row">
+        <view class="order_left">订单日期</view>
+        <view class="order_right">{{item.create_time}}</view>
+      </view>
+    </view>
+    </block>
+  </van-tab>
+  <van-tab title="待付款">付款</van-tab>
+  <van-tab title="代发货">发货</van-tab>
+</van-tabs>

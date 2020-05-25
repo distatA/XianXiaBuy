@@ -1,0 +1,6 @@
+<!-- tab栏 -->
+<view class="tabs">
+  <block wx:for="{{item}}"  wx:key="id">
+    <view class="tabs_item {{ index === activeIndex ? 'active':'' }} " bind:tap="handleTab" data-index="{{index}}" >{{item.value}}</view>
+  </block>
+</view>

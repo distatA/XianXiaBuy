@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "搜索中心",
+  "usingComponents": {
+  "goodsitem":"/components/goods_item/goods_item" ,
+    "van-toast": "@vant/weapp/toast/index",
+    "van-search": "@vant/weapp/search/index"
+  }
+}

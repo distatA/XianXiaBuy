@@ -1,0 +1,8 @@
+     <view class="tabBar">
+    <view class="tabBar_item {{current===item.id ? 'active':''}} " wx:for="{{tabBar}}" data-id="{{item.id}}" data-src="{{item.src}}" wx:key="id"  bindtap="tabbarClick">
+      <view class="iconfont {{item.class}}"></view>
+      {{item.value}}
+    </view>
+  </view>
+  
+  

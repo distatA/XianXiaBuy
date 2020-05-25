@@ -1,0 +1,26 @@
+<!-- 搜索框 -->
+<search />
+<tab item="{{tabList}}"/>
+<!-- 商品列表 -->
+<view class="productList">
+
+<block wx:for="{{goodsList}}"  wx:key="goods_id">
+ <goodsitem  item="{{item}}" />
+  
+</block>
+</view>
+   <!-- <navigator url="/pages/goods_detail/index?id={{item.goods_id}}" 
+  hover-class="none" open-type="navigate"
+     class="productList_item"  wx:for="{{goodsList}}" wx:key="goods_id">
+        <image  class="productList_photo" src="{{item.goods_small_logo || '../../images/下架.png'}}"  />
+        
+      <view class="productList_info">
+        <view class="productList_info_title">
+        {{item.goods_name}}
+        </view>
+        <view class="productList_info_price">
+        
+         {{ item.goods_small_logo ? item.goods_price:'0'}}
+        </view>
+      </view>
+  </navigator> -->

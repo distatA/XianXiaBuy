@@ -1,0 +1,8 @@
+
+<view class="page">
+  <button  open-type="getUserInfo" type="primary" bindgetuserinfo="getUserInfo" class="btn" >
+  点击授权登录
+</button>
+  
+</view>
+  

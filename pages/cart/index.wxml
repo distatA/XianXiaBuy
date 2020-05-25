@@ -1,0 +1,42 @@
+<view class="goods_list">
+  <view wx:for="{{cartData}}" wx:key="goods_id" class="goods_item">
+    <view class="goods_leftPart" bind:tap="handleRadio" data-index="{{ index }}">
+      <radio class="" value="" radio-group="" checked="{{item.isSelect}}" color="#e03440" />
+    </view>
+    <view class="goods_rightPart">
+      <goodsitem item="{{ item }}" />
+      <!-- 计数器 -->
+      <view class="goods_count">
+        <view class="iconfont iconiconset0187" bindtap="changeNUm" data-number="{{ -1 }}" data-index="{{ index }}"></view>
+        <view class="goods_num">{{item.count}}</view>
+        <view class="iconfont iconiconset0186" bindtap="changeNUm" data-number="{{ 1 }}" data-index="{{ index }}"></view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 购物车空提示 -->
+<!-- {{ cartData.length === 0 ? 'hidden':''}} -->
+<view class="empty {{cartData.length === 0 && block === true? 'show':''}}">
+  <view class="empty_box">
+    <image src="../../images/cart_empty.gif" class="empty_images" mode="widthFix" />
+    <view class="empty_tips">
+      <!-- <navigator url="/pages/index/index" hover-class="navigator-hover" open-type="switchTab"> -->
+        你的购物车空空如也,快去逛逛吧~
+      <!-- </navigator> -->
+    </view>
+  </view>
+</view>
+<view class="operationBar">
+  <view class="operationBar_left">
+    <view class="operationBar_select" bindtap="handleAllSelect">
+      <radio checked="{{allSelect}}" color="#fe3648"></radio>
+      <view class="operationBar_select_all">全选</view>
+    </view>
+    <view class="operationBar_total">
+      <view style="width:85rpx;"> 合计:</view>
+      <view class="operationBar_total_price">{{totalPrice}}</view>
+    </view>
+  </view>
+
+  <view class="operationBar_btn" bind:tap="toPay">去结算({{selectCount}})</view>
+</view>

@@ -1,0 +1,32 @@
+@import "../../styles/iconfont.wxss";
+.tabBar{
+  // margin-top: 50rpx;
+  height: 115rpx;
+  width: 100%;
+  background-color:#fafafa;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+
+  .tabBar_item{
+      width: 182rpx;
+      height: 100%;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      align-items: center;
+      font-size: 25rpx;
+      .iconfont{
+        padding-top: 7rpx;
+          width: 48rpx;
+          height: 48rpx;
+          font-size: 53rpx;
+      }
+  }
+  .active {
+    color: #8bc34a;
+  }
+}

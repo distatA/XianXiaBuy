@@ -1,0 +1,126 @@
+page {
+  background-color: var(--pageBackgroundColor);
+}
+.userTop {
+  padding: 0 5rpx;
+  width: 750rpx;
+  height: 300rpx;
+  background: linear-gradient(#fd4c54, #fd6f4f);
+  border-radius: 0 0 70rpx 70rpx;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.userTop_headerImg {
+  margin-left: 10rpx;
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50rpx;
+  border: 5rpx solid white;
+}
+.userTop_headerImg_img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50rpx;
+}
+.userTop_info {
+  flex: 1;
+  margin-left: 35rpx;
+  display: flex;
+  flex-direction: column;
+  height: 100rpx;
+  justify-content: center;
+}
+.userTop_sao {
+  margin-right: 10rpx;
+  display: flex;
+  height: 100rpx;
+  width: 100rpx;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.userTop_sao .iconsaoyisao {
+  font-size: 50rpx;
+  margin-bottom: 10rpx;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+  height: 150rpx;
+  width: 710rpx;
+  position: absolute;
+  top: 255rpx;
+  left: 26rpx;
+  border-radius: 30rpx;
+}
+.nav_item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.nav_item .iconfont {
+  font-size: 42rpx;
+  margin-bottom: 10rpx;
+  color: #fd876c;
+}
+.money {
+  display: flex;
+  align-items: center;
+  height: 150rpx;
+  transform: translateY(155rpx);
+  margin: 0rpx 20rpx;
+  border-radius: 30rpx;
+  width: 710rpx;
+  background-color: #fff;
+}
+.money_left {
+  min-width: 120rpx;
+  display: flex;
+  height: 50%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-right: 5rpx solid #eee;
+  padding: 20rpx;
+}
+.money_left .iconwodeqianbao {
+  margin-bottom: 10rpx;
+  font-size: 38rpx;
+  color: #fd6f4f;
+}
+.money_right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.money_right_number {
+  margin-bottom: 10rpx;
+}
+.manageMore {
+  margin-top: 225rpx;
+  display: flex;
+  transform: translateX(20rpx);
+  width: 710rpx;
+  flex-wrap: wrap;
+  background-color: #fff;
+  border-radius: 30rpx;
+}
+.manageMore_item {
+  height: 120rpx;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+.manageMore_item .iconfont {
+  font-size: 40rpx;
+  margin-bottom: 15rpx;
+  color: #fd6f4f;
+}

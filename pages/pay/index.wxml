@@ -1,0 +1,100 @@
+<!-- <button bind:tap="getUserAddress" >
+  获取用户收货地址
+</button> -->
+<view wx:if="{{cart.length !== 0 }}">
+  <view class="detailInfo">
+  <!-- 地址 -->
+  <view class="address">
+    <view class="address_top">
+      <view class="address_top_pickupAddress" >提货地址:</view>
+      <view class="address_top_rightPart" bind:tap="getUserAddress">
+        <view class="address_top_detailAddress" >{{address.addressDetail ?address.addressDetail : '点击添加地址' }}</view>
+        <view class="iconfont iconjinru"></view>
+      </view>
+    </view>
+    <view class="address_body">
+      <view class="iconfont icondizhi"></view>
+      <view class="address_body_font">广东省天河区吉山村</view>
+    </view>
+  </view>
+  <!-- 提货 -->
+  <view class="pickup">
+    <view class="pickup_person">提货人:</view>
+    <input class="pickup_input" value="" placeholder="{{address.userName ? address.userName : '输入您的名称' }}" placeholder-style="color:black;" />
+  </view>
+  <view class="pickup">
+    <view class="pickup_person">手机号:</view>
+    <input class="pickup_input" value="" placeholder="请输入手机号码" />
+    <view class="verificationcode">获取验证码手机号</view>
+  </view>
+  <view class="pickup">
+    <view class="pickup_person">备注:</view>
+    <input class="pickup_input" value="" placeholder="请输入备注" />
+  </view>
+  <!-- 商品 -->
+  <view class="product">
+    <view class="product_top">已选商品</view>
+  <block wx:for="{{cart}}" wx:key="goods_id" wx:if="{{item.isSelect}}">
+    <view class="product_content">
+         <goodsitem item="{{item}}" />
+       <view class="product_number">
+          X{{item.count}}
+       </view>
+    </view>
+  </block>
+  </view>
+</view>
+<!-- 支付详情 -->
+<view class="payDetail">
+  <view class="payDetail_title">
+    支付明细
+  </view>
+    <view class="payDetail_detail">
+      <view class="payDetail_detail_left">
+        商品数量
+      </view>
+        <view class="payDetail_detail_right">
+          {{cartElseData.selectCount}} 件
+        </view>
+    </view>
+      <view class="payDetail_detail">
+      <view class="payDetail_detail_left">
+        商品总额
+      </view>
+        <view class="payDetail_detail_right" style="color:red;">
+          ¥  {{cartElseData.totalPrice}}
+        </view>
+    </view>
+      <view class="payDetail_detail">
+      <view class="payDetail_detail_left">
+       提货日期
+      </view>
+        <view class="payDetail_detail_right">
+         {{dateNow}}
+        </view>
+    </view>
+      
+</view>
+<!-- 定位遮挡了元素,在外面套个盒子给个高度 -->
+<view style="height:120rpx;margin-top:30rpx;">
+    <view class="payBottom">
+    <view class="payBottom_left">
+        <view class="payBottom_left_total">
+          总计:
+        </view>
+        <view class="payBottom_left_Price">
+       {{cartElseData.totalPrice}}
+        </view>
+    </view>
+    <view class="payBottom_right {{ !address.userName ? 'disabled' : ''}}" bind:tap="toPay">
+        立即下单({{cartElseData.selectCount}})
+    </view>
+  </view>
+    
+</view>
+</view>
+
+<view class="empty" >
+  当前还没有订单~
+</view>
+  

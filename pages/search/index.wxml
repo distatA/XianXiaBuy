@@ -1,0 +1,22 @@
+<van-search
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+  <view slot="action" bind:tap="onClick" class="btn">搜索</view>
+</van-search>
+
+
+<block wx:for="{{defaulGoods}}" wx:key="goods_id" >
+<goodsitem item="{{item}}" /> 
+</block>
+<view class="tips" wx:if="{{defaulGoods.length === 0}}">
+  找不到该商品
+</view>
+
+  
+  
+
+
